@@ -32,7 +32,7 @@ export default function Cadastro() {
     return (
         <div className={styles.main}>
             <form action='' onSubmit={cadastrar}>
-                <h1>
+                <h1 class="cadastro">
                     Cadastrar
                 </h1>
                 <input placeholder='INFORME O NOME DO ALUNO' nome="nome" type="text"

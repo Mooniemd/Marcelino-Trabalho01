@@ -14,6 +14,7 @@ text-align: center;
 background-color: white;
 border-radius: 10px;
 min-height: 150px;
+width: 350px;
 }
 
 input {
@@ -36,7 +37,6 @@ input {
   justify-content: center;
   grid-template-columns: 50% 50%;
   text-align: center;
-  margin-left: 60px;
 }
 
 .btn2{
@@ -56,15 +56,22 @@ input {
 h1{
   color: white;
   font-weight: 100;
+  align-items: center;
 }
 
 p{
   display: grid;
   justify-content: center;
+  align-items: center;
 }
 
 a{
   text-decoration: none;
+  color: black
+}
+
+.curso{
+  margin-right: 70px;
 }
 
 .littlea{

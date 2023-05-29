@@ -1,22 +1,10 @@
 {
   "alunos": [
     {
-      "id": 1,
-      "nome": "Moonie",
-      "num_inscricao": 1000,
-      "curso": "Info"
-    },
-    {
-      "id": 2,
-      "nome": "Caio",
-      "num_inscricao": 1002,
-      "curso": "Info"
-    },
-    {
-      "id": 3,
-      "nome": "Robertão",
-      "num_inscricao": 1003,
-      "curso": "Agro"
+      "nome": "as",
+      "curso": "info",
+      "num_inscricao": "1006",
+      "id": 2
     }
   ]
 }

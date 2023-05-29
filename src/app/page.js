@@ -1,10 +1,8 @@
 "use client"
-import { useRouter } from 'next/navigation';
 import styles from './page.module.css'
 import Link from 'next/link';
 
 export default async function Home() {
-  const router = useRouter();
   const req = await fetch("http://localhost:3003/alunos", {
     next:{revalidate:1},
   });
@@ -27,7 +25,8 @@ export default async function Home() {
       {alunos.map(aluno => (
         <div key={aluno.id} class="jamogba">
           <p>{aluno.nome}</p>
-          <p>{aluno.curso}</p>
+          <p class="curso">{aluno.curso}</p>
+          <p>{aluno.num_inscricao}</p>
           <button class="btn" onClick={e => e.preventDefault(remover(aluno.id))}>REMOVER</button>
         </div>
       ))}
