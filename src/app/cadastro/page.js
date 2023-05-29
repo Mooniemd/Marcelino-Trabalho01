@@ -43,8 +43,8 @@ export default function Cadastro() {
 
                 <input placeholder='INFORME Nº DE INSCRIÇÃO' nome="num_inscricao" type="number"
                     onChange={e => setNum_inscricao(e.target.value)}></input><br/>
-                <button type='submit'>CADASTRAR</button>
-                <a href='/'>Voltar</a>
+                <button type='submit' class="btn2">CADASTRAR</button>
+                <a href='/' class="littlea">VOLTAR</a>
             </form>
         </div>
 

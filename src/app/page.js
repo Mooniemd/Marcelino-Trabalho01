@@ -5,14 +5,14 @@ import Link from 'next/link';
 
 export default async function Home() {
   const router = useRouter();
-  const req = await fetch("http://localhost:3000/alunos", {
+  const req = await fetch("http://localhost:3003/alunos", {
     next:{revalidate:1},
   });
   const alunos = await req.json();
  
   const remover = async (id) => {
     try {
-      await fetch("http://localhost:3004/alunos/" + id, {
+      await fetch("http://localhost:3003/alunos/" + id, {
         method: "DELETE"
       })
       router.refresh()
@@ -23,12 +23,12 @@ export default async function Home() {
   return (
     <main className={styles.main}>
 
-      <Link href="/cadastro">CADASTRAR</Link>
+      <Link href="/cadastro" class="cadastro">CADASTRAR</Link>
       {alunos.map(aluno => (
-        <div key={aluno.id} id="jamogba">
+        <div key={aluno.id} class="jamogba">
           <p>{aluno.nome}</p>
           <p>{aluno.curso}</p>
-          <button onClick={e => e.preventDefault(remover(aluno.id))}>REMOVER</button>
+          <button class="btn" onClick={e => e.preventDefault(remover(aluno.id))}>REMOVER</button>
         </div>
       ))}
     </main>
